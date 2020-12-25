@@ -39,11 +39,16 @@ def solve(ip):
     # raise NotImplementedError("Học viên chưa làm bài này")
     list = []
     for i in ip.split('.'):
-        print(i)
+        # print(i)
         if i not in '1':
-            print(bin(i))
+            # print(i)
+            # print(bin(int(i)))
+            list.append(bin(int(i))[2:])
         else:
-            print(i.zfill(7))
+            # print(i)
+            # print(i.zfill(7))
+            list.append(i.zfill(7))
+    result = ".".join(list)
     return result
 
 

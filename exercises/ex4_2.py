@@ -12,7 +12,6 @@ def solve(octal):
     In [1]: oct(73)
     Out[1]: '0o111'
     '''
-
     result = None
 
     # Xoá dòng sau và viết code vào đây set các giá trị phù hợp

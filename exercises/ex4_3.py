@@ -15,9 +15,12 @@ def solve(words):
     '''
     import string
     vword = [words for words in string.ascii_lowercase]
+    words = words.lower()
+    sum = 0
 
-    for word in range(len(words)):
-        print(word)
+
+
+
 
 
 

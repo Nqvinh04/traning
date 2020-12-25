@@ -26,6 +26,7 @@ def solve(text):
 
 def main():
     ss = 'Bé lên 3 bé đi lớp 4'
+    # ss = 'Em ơi có bao nhiêu 60 năm cuộc đời 20 năm đầu sung sướng 0 bao lâu'
     print(solve(ss))
     assert solve(ss) == [3, 4]
 
