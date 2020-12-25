@@ -14,10 +14,22 @@ def solve():
     '''
 
     result = None
-
+    count = 0
     # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
-    raise NotImplementedError("Học viên chưa làm bài này")
-
+    # raise NotImplementedError("Học viên chưa làm bài này")
+    for a in range(1, 10):
+        for b in range(1, 10):
+            for c in range(1, 10):
+                for d in range(1, 10):
+                    for e in range(1, 10):
+                        for f in range(1, 10):
+                            for g in range(1, 10):
+                                for h in range(1, 10):
+                                    for i in range(1, 10):
+                                        if a + 13 * b / c + d + 12 * e - f - 11 + g * h / i - 10 == 66:
+                                            count += 1
+                                            print(count)
+                                        result = count
     return result
 
 
