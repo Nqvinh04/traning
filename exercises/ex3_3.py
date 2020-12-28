@@ -21,7 +21,7 @@ def solve():
     # raise NotImplementedError("Học viên chưa làm bài này")
     # Simple
     list = []
-    for i in range(1, 101):
+    for i in range(1, 100):
         if (i % 3 == 0) and (i % 5 == 0):
             print("So ", i, " = FizzBuzz")
             # list.append(FB)

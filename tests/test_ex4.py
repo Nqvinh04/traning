@@ -45,8 +45,8 @@ class TestExercise4(TestExercise):
 
     def test_ex4_6(self):
         ss3 = '10 Bé học lớp 3 lên lớp 4'
-        ss = ', 60năm cuộc đời, 20 năm đầu, sung sướng0bao lâu'
-        ss2 = '6năm0 cuộc đời, 20 năm đầu, sung sướng0bao lâu'
+        ss = ', 60 năm cuộc đời, 20 năm đầu, sung sướng 0 bao lâu'
+        ss2 = '6 năm 0 cuộc đời, 20 năm đầu, sung sướng 0 bao lâu'
 
         import re
         pattern = re.compile('\d+')

@@ -17,7 +17,7 @@ def solve():
         for b in range(1, 10):
             c = 24 - (a + b)
             if a ** 2 + b ** 2 == c ** 2:
-                li.append([a, b, c])
+                li.append([(a, b, c)])
         a += 1
     result = li
 

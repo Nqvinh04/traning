@@ -24,28 +24,10 @@ def solve(colors):
     '''
 
     result = []
-    color = [c for c in colors.keys()]
-    listColor = []
-    listString = []
-    # print(color)
-    # Xoá dòng raise và Viết code vào đây set result làm kết quả
-    # raise NotImplementedError("Học viên chưa làm bài này")
-    str = 'Google'
-    for i in range(len(str)):
-        listString.append(str[i])
-        if str[i] == 'G' or str[i] == 'g':
-            listColor.append(color[-1])
-        elif str[i] == 'o' and str[i + 1] == 'o':
-            listColor.append(color[-3])
-        elif str[i] == 'o' or str[i] == 'e':
-            listColor.append(color[-2])
-        elif str[i] == 'l':
-            listColor.append(color[-4])
-
-    # print(listColor)
-    v = zip(listColor, listString)
-    resultSet = set(v)
-    result = list(resultSet)
+    google = ['G', 'o', 'o', 'g', 'l', 'e']
+    color = list(colors.values())
+    google_color = [color[3], color[2], color[1], color[3], color[0], color[2]]
+    result = list(zip(google, google_color))
     return result
 
 

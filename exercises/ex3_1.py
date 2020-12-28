@@ -22,10 +22,13 @@ def solve(input_data):
     result = None
     if input_data == 0:
         return '0'
-    result = '1' + bin(input_data).split('1')[-1]
+    elif input_data == 1:
+        return 1
+    else:
+        result = '1' + bin(input_data).split('1')[-1]
     return result
 def main():
-    print(solve(1000))
+    print(solve(5))
 
 
 if __name__ == "__main__":
