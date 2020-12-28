@@ -49,6 +49,7 @@ def solve(ip):
             # print(i.zfill(7))
             list.append(i.zfill(7))
     result = ".".join(list)
+    print(type(result))
     return result
 
 

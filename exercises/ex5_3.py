@@ -20,9 +20,13 @@ def solve(input_data):
     (Nếu có nhiều từ cùng xuất hiện với số lần như nhau thì trả về từ nào
     cũng được).
     '''
-    result = None
+    result = []
     # Xoá dòng raise và Viết code vào đây set result làm kết quả
-    raise NotImplementedError("Học viên chưa làm bài này")
+    # raise NotImplementedError("Học viên chưa làm bài này")
+    # freq = {}
+    # line = input()
+    # for word in line.split():
+
 
     return result
 

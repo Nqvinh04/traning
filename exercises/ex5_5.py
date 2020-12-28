@@ -8,6 +8,7 @@ MAGIC_NUMBER = 20200000
 
 
 def solve(students, N=5):
+    import re
     '''Biết những bạn có tên bắt đầu bằng chữ `D` sẽ ngồi phòng thi số N,
     các bạn có tên bắt đầu chữ `H` ngồi phòng thi số N+1, và các bạn còn lại,
     nếu có tên kết thúc là `ng` sẽ ngồi cùng phòng các bạn tên `H`, còn lại
@@ -23,9 +24,17 @@ def solve(students, N=5):
     '''
 
     result = []
+    list = ()
     # Xoá dòng raise và Viết code vào đây set result làm kết quả
-    raise NotImplementedError("Học viên chưa làm bài này")
-
+    # raise NotImplementedError("Học viên chưa làm bài này")
+    for i in students:
+        if i.startswith('D'):
+            a = hash(i) % MAGIC_NUMBER, i, '1990', N
+        elif i.startswith('H') or i.endswith('ng'):
+            list = (hash(i) % MAGIC_NUMBER, i, '1990', N + 1)
+        else:
+            print(hash(i) % MAGIC_NUMBER, i, '1990', N)
+    result =
     return result
 
 

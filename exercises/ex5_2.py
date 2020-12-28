@@ -49,23 +49,36 @@ def solve(last_year_daa):
     # Xoá dòng raise và Viết code vào đây set result làm kết quả
     # raise NotImplementedError("Học viên chưa làm bài này")
 
-    last_year_daa[1]['languages'] = ["Python", "C", "SQL", "HTML", "CSS", "JavaScript",
-                   "Golang"]
-    last_year_daa[2]['languages'] = ["Python", "C", "SQL", "HTML", "CSS", "JavaScript",
-                   "Golang"]
-    last_year_daa[3]['languages'] = ["Python", "C", "SQL", "HTML", "CSS", "JavaScript",
-                   "Golang"]
+    # last_year_daa[1]['languages'] = ["Python", "C", "SQL", "HTML", "CSS", "JavaScript",
+    #                "Golang"]
+    # last_year_daa[2]['languages'] = ["Python", "C", "SQL", "HTML", "CSS", "JavaScript",
+    #                "Golang"]
+    # last_year_daa[3]['languages'] = ["Python", "C", "SQL", "HTML", "CSS", "JavaScript",
+    #                "Golang"]
+    #
+    # # print(last_year_daa)
+    # for i in range(len(last_year_daa)):
+    #     if last_year_daa[i].get('name') == 'Hoang':
+    #         last_year_daa[i]['languages'].append('Elixir')
+    #     elif last_year_daa[i].get('name') == 'Tu':
+    #         last_year_daa[i]["girl_friend"] = "Do Anh"
+    #     elif last_year_daa[i].get('name') == 'Duy':
+    #         last_year_daa[i].pop("girl_friend")
+    # # print(last_year_daa)
+    # result = last_year_daa
 
-    # print(last_year_daa)
-    for i in range(len(last_year_daa)):
-        if last_year_daa[i].get('name') == 'Hoang':
-            last_year_daa[i]['languages'].append('Elixir')
-        elif last_year_daa[i].get('name') == 'Tu':
-            last_year_daa[i]["girl_friend"] = "Do Anh"
-        elif last_year_daa[i].get('name') == 'Duy':
-            last_year_daa[i].pop("girl_friend")
-    # print(last_year_daa)
-    result = last_year_daa
+    language = []
+    for stu in data:
+        if stu.get("name") == "Hoang":
+            language = list(stu.get("languages"))
+            stu["languages"].append("Elixir")
+        else:
+            stu["languages"] = language
+        if stu.get("name") == "Duy":
+            stu.pop("girl_friend")
+        if stu.get("name") == "Tu":
+            stu["girl_friend"] = "Do Anh"
+    result = data
     return result
 
 

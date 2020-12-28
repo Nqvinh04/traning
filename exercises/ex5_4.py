@@ -16,10 +16,7 @@ def solve(output_path):
     # Xoá dòng raise và Viết code vào đây set result làm kết quả
     raise NotImplementedError("Học viên chưa làm bài này")
 
-    #
-    #
-    #
-    #
+
 
     import os
     # Xoá file sau khi đã xong vì file này rất lớn
