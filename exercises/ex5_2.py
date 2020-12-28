@@ -46,7 +46,7 @@ def solve(last_year_data):
     result = []
 
     # Xoá dòng raise và Viết code vào đây set result làm kết quả
-    raise NotImplementedError("Học viên chưa làm bài này")
+    # raise NotImplementedError("Học viên chưa làm bài này")
 
     return result
 

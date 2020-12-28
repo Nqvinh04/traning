@@ -2,8 +2,9 @@
 
 term1 = {'math': 3, 'python': 5, 'data': 2}
 term2 = {'math': 7, 'python': 9, 'SQL': 8, 'HTML': 6}
+# term1.update(term2)
+# print(term1)
 data = [term1, term2]
-
 
 def solve(term1, term2):
     '''Trả về result là dict chứa bảng điểm của các môn học sau hai học kỳ.
@@ -12,7 +13,9 @@ def solve(term1, term2):
 
     result = {}
     # Xoá dòng raise và Viết code vào đây set result làm kết quả
-    raise NotImplementedError("Học viên chưa làm bài này")
+    # raise NotImplementedError("Học viên chưa làm bài này")
+    term1.update(term2)
+    result = term1
     return result
 
 
@@ -21,6 +24,7 @@ def main():
     # Học kỳ 2, học thêm/lại có bảng điểm trong term2
 
     print(solve(*data))
+
 
 
 if __name__ == "__main__":

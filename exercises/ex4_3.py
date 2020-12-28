@@ -13,23 +13,27 @@ def solve(words):
       import string
       print(string.ascii_lowercase)
     '''
-    import string
-    vword = [words for words in string.ascii_lowercase]
-    words = words.lower()
+    result = None
+    # import string
+    # alphabet = [a for a in string.ascii_lowercase]
+    # for w in range(len(alphabet)):
+    #     print(alphabet.index('a') + 1)
+    word = words.lower()
     sum = 0
-
-
-
-
-
-
+    for w in word:
+        gt = ord(w) - 96
+        sum += gt
+    result = sum
+    return result
 
 
 def main():
     words = ['numpy', 'django', 'saltstack', 'discipline',
              'Python', 'FAMILUG', 'pymi']
-
-    print(solve(words))
+    list = []
+    for w in words:
+        list.append(solve(w))
+    print(list)
 
 
 if __name__ == "__main__":

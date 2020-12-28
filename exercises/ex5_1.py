@@ -8,7 +8,6 @@ data = {
     'xanh da trời': '#4885ed',
 }
 
-
 def solve(colors):
     '''Ghi ra file index.html code HTML để tạo ra logo của Google với màu sắc
     chính xác.
@@ -23,11 +22,30 @@ def solve(colors):
         In [1]: list(zip(['xanh', 'do'], ['XXX', 'YYY']))
         Out[1]: [('xanh', 'XXX'), ('do', 'YYY')]
     '''
+
     result = []
-
+    color = [c for c in colors.keys()]
+    listColor = []
+    listString = []
+    # print(color)
     # Xoá dòng raise và Viết code vào đây set result làm kết quả
-    raise NotImplementedError("Học viên chưa làm bài này")
+    # raise NotImplementedError("Học viên chưa làm bài này")
+    str = 'Google'
+    for i in range(len(str)):
+        listString.append(str[i])
+        if str[i] == 'G' or str[i] == 'g':
+            listColor.append(color[-1])
+        elif str[i] == 'o' and str[i + 1] == 'o':
+            listColor.append(color[-3])
+        elif str[i] == 'o' or str[i] == 'e':
+            listColor.append(color[-2])
+        elif str[i] == 'l':
+            listColor.append(color[-4])
 
+    # print(listColor)
+    v = zip(listColor, listString)
+    resultSet = set(v)
+    result = list(resultSet)
     return result
 
 
