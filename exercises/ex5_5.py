@@ -24,17 +24,21 @@ def solve(students, N=5):
     '''
 
     result = []
-    list = ()
+    list = []
     # Xoá dòng raise và Viết code vào đây set result làm kết quả
     # raise NotImplementedError("Học viên chưa làm bài này")
     for i in students:
         if i.startswith('D'):
-            a = hash(i) % MAGIC_NUMBER, i, '1990', N
+            list.append([hash(i) % MAGIC_NUMBER, i, 1990, N])
         elif i.startswith('H') or i.endswith('ng'):
-            list = (hash(i) % MAGIC_NUMBER, i, '1990', N + 1)
+            list.append([hash(i) % MAGIC_NUMBER, i, 1990, N + 1])
         else:
-            print(hash(i) % MAGIC_NUMBER, i, '1990', N)
-    result =
+            list.append([hash(i) % MAGIC_NUMBER, i, 1990, N])
+    for i in list:
+        t = tuple(i)
+        result.append(t)
+    result.sort(key=lambda tup: tup[1])
+    print(result)
     return result
 
 
@@ -43,7 +47,7 @@ def main():
     # Cho danh sách học viên students
     for msv, *ignore, room in solve(students):
         print(msv, room)
-        print("DEBUG", ignore, type(ignore), len(ignore))
+        # print("DEBUG", ignore, type(ignore), len(ignore))
 
 
 if __name__ == "__main__":

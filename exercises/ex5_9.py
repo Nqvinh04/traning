@@ -126,6 +126,7 @@ data = [
 
 
 def solve(input_data):
+    print(range(len(input_data)))
     '''Dùng list comprehensions để:
 
     - Tạo 1 list chứa tên, dân số của các thành phố có tên bắt đầu bằng chữ H,
@@ -139,7 +140,10 @@ def solve(input_data):
 
     # Xoá dòng raise và Viết code vào đây set các giá trị phù hợp
     # raise NotImplementedError("Học viên chưa làm bài này")
-
+    startswith_h = [i for i in range(len(input_data)) if input_data[i].get("name").startswith("H")]
+    print(startswith_h)
+    more_than_1m = [i for i in range(len(input_data)) if input_data[i].get("population") > 1000000]
+    print(more_than_1m)
     result = (provinces_startswith_h, provinces_more_than_1m)
     return result
 
