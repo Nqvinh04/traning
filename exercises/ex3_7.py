@@ -18,17 +18,8 @@ def solve():
     Lưu ý: Thứ tự tăng dần theo bảng cửu chương
     '''
     result = None
-    list = []
-
     # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
-    for i in range(0, 101, 5):
-        if i == 0:
-            pass
-        else:
-            if i % 5 == 0:
-                print(i, "==", int(i/5), "*", 5)
-    result = list
-    # result = ['{} == {} * 5'.format(num, int(num / 5)) for num in range(0, 100, 5)]
+    result = ['{} == {} * 5'.format(num, int(num / 5)) for num in range(0, 100, 5) if num != 0]
     return result
 
 

@@ -16,19 +16,19 @@ def solve(text):
 
     # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
     # raise NotImplementedError("Học viên chưa làm bài này")
-    letters = list(text.lower())
-    for letter in letters:
-        if letter == letters[-1]:
-            letters.pop(-1)
-        else:
-            result = False
-            break
+    # letters = list(text.lower())
+    # for letter in letters:
+    #     if letter == letters[-1]:
+    #         letters.pop(-1)
+    #     else:
+    #         result = False
+    #         break
     # text1 = text.lower()
-    # text2 = text[::-1].lower()
-    # if text1 == text2:
-    #     return result
-    # else:
-    #     result = False
+    text = text.strip()
+    if len(text) > 1:
+        result = text[::-1].lower() == text.lower()
+    else:
+        return False
     return result
 
 def main():
@@ -36,6 +36,10 @@ def main():
     print(solve('civic'))
     print(solve('Noon'))
     print(solve('Nool'))
+    print(solve(''))
+    print(solve('P'))
+    print(solve(' P  '))
+    # print(solve(' P '))
 
 
 if __name__ == "__main__":

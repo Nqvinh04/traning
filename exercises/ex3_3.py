@@ -21,18 +21,18 @@ def solve():
     # raise NotImplementedError("Học viên chưa làm bài này")
     # Simple
     list = []
-    for i in range(1, 100):
+    for i in range(1, 101):
         if (i % 3 == 0) and (i % 5 == 0):
-            print("So ", i, " = FizzBuzz")
+            list.append(("FizzBuzz"))
             # list.append(FB)
         elif i % 3 == 0:
-            print("So ", i, "= Fizz")
+            list.append(("Fizz"))
             # list.append(F)
         elif i % 5 == 0:
-            print("So ", i, "= Buzz")
+            list.append(("Buzz"))
             # list.append(B)
         else:
-            print("So ", i)
+            list.append((i))
             # list.append(i)
     result = list
     return result

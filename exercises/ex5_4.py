@@ -12,9 +12,20 @@ def solve(output_path):
 
     Chú ý: 30 triệu dòng.
     '''
-    result = None
+    result = []
     # Xoá dòng raise và Viết code vào đây set result làm kết quả
-    raise NotImplementedError("Học viên chưa làm bài này")
+    # raise NotImplementedError("Học viên chưa làm bài này")
+    with open(output_path, 'w') as file:
+        for i in range(1, NUMBER_OF_LINES + 1):
+            if i % 2 != 0:
+                file.write("1111111111111111111111111111111111\n")
+                if i > NUMBER_OF_LINES - 10:
+                    result.append("1111111111111111111111111111111111\n")
+            else:
+                file.write(f"{i * 2}\n")
+                if i > NUMBER_OF_LINES - 10:
+                    result.append(f"{i * 2}\n")
+
 
 
 

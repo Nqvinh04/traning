@@ -29,14 +29,16 @@ def solve(students, N=5):
     # raise NotImplementedError("Học viên chưa làm bài này")
     for i in students:
         if i.startswith('D'):
-            list.append([hash(i) % MAGIC_NUMBER, i, 1990, N])
+            list.append((hash(i) % MAGIC_NUMBER, i, 1990, N))
         elif i.startswith('H') or i.endswith('ng'):
-            list.append([hash(i) % MAGIC_NUMBER, i, 1990, N + 1])
+            list.append((hash(i) % MAGIC_NUMBER, i, 1990, N + 1))
         else:
-            list.append([hash(i) % MAGIC_NUMBER, i, 1990, N])
-    for i in list:
-        t = tuple(i)
-        result.append(t)
+            list.append((hash(i) % MAGIC_NUMBER, i, 1990, N))
+    # for i in list:
+    #     t = tuple(i)
+    #     result.append(t)
+    # print(result)
+    result = list
     result.sort(key=lambda tup: tup[1])
     print(result)
     return result

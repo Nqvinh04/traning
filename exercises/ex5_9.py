@@ -140,10 +140,30 @@ def solve(input_data):
 
     # Xoá dòng raise và Viết code vào đây set các giá trị phù hợp
     # raise NotImplementedError("Học viên chưa làm bài này")
-    startswith_h = [i for i in range(len(input_data)) if input_data[i].get("name").startswith("H")]
-    print(startswith_h)
-    more_than_1m = [i for i in range(len(input_data)) if input_data[i].get("population") > 1000000]
-    print(more_than_1m)
+
+    """
+    Sử dụng sort
+    """
+    # startswith_h = [input_data[i] for i in range(len(input_data)) if input_data[i].get("name").startswith("H")]
+    # startswith_h = [i for i in input_data if i.get("name").startswith("H")]
+    # print(startswith_h)
+    # for i in range(len(startswith_h)):
+    #     provinces_startswith_h.append((startswith_h[i].get("name"), startswith_h[i].get("population")))
+    # provinces_startswith_h.sort(key=lambda x: x[0])
+    # print(provinces_startswith_h[-2:])
+
+
+    # more_than_1m = [input_data[i] for i in range(len(input_data)) if input_data[i].get("population") > 1000000]
+    # for i in range(len(more_than_1m)):
+    #     provinces_more_than_1m.append((more_than_1m[i].get("name"), more_than_1m[i].get("population")))
+    # provinces_more_than_1m.sort(key=lambda x: x[1], reverse=True)
+    # print(provinces_more_than_1m)
+
+    """
+    Sử dụng sorted
+    """
+    provinces_startswith_h = sorted([(city['name'], city['population']) for city in input_data if city['name'][0] == 'H'], key=lambda x: x[0])
+    provinces_more_than_1m = sorted([(city['name'], city['population']) for city in input_data if city['population'] > 1000000], key=lambda x: x[1], reverse=True)
     result = (provinces_startswith_h, provinces_more_than_1m)
     return result
 

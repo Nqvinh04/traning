@@ -37,19 +37,26 @@ def solve(ip):
     result = None
     # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
     # raise NotImplementedError("Học viên chưa làm bài này")
-    list = []
-    for i in ip.split('.'):
-        # print(i)
-        if i not in '1':
-            # print(i)
-            # print(bin(int(i)))
-            list.append(bin(int(i))[2:])
-        else:
-            # print(i)
-            # print(i.zfill(7))
-            list.append(i.zfill(7))
-    result = ".".join(list)
-    print(type(result))
+    # list = []
+    # for i in ip.split('.'):
+    #     if i in '0':
+    #         list.append(i.zfill(8))
+    #     else:
+    #         # print(i)
+    #         if i not in '1':
+    #         # print(i)
+    #         # print(bin(int(i)))
+    #             list.append(bin(int(i))[2:])
+    #         else:
+    #         # print(i)
+    #             list.append(i.zfill(8))
+    # result = ".".join(list)
+    ip_split = [bin(int(i))[2:] for i in ip.split('.')]
+    for i in range(0, len(ip_split)):
+        if len(ip_split[i]) < 8:
+            ip_split[i] = ip_split[i].zfill(8)
+    result = ('.').join(ip_split)
+    # print(type(result))
     return result
 
 

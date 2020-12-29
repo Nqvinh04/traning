@@ -20,12 +20,9 @@ def solve(input_data):
     # Xoá dòng raise và Viết code vào đây set result làm kết quả
     # raise NotImplementedError("Học viên chưa làm bài này")
     for i in input_data:
-        t = str(i).rjust(8) + \
-            bin(i)[2:].rjust(8) + \
-            oct(i).rjust(8) + \
-            hex(i).rjust(8)
+        t = (str(i).rjust(8) + bin(i)[2:].rjust(8) + oct(i).rjust(8) + hex(i).rjust(8)+'\n')
         list.append(t)
-    result = '\n'.join(list)
+    result = ''.join(list)
     return result
 
 

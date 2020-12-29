@@ -42,9 +42,9 @@ def solve(input_data):
     # result = tuple(li)
     # print(type(result))
     # return result
-    data = [("January", 31), ("February", 28), ("March", 31), ("April", 31),
+    data = [("January", 31), ("February", 28), ("March", 31), ("April", 30),
             ("May", 31), ("June", 31), ("July", 31), ("August", 31),
-            ("September", 31), ("October", 31), ("November", 31), ("December", 30)]
+            ("September", 30), ("October", 31), ("November", 31), ("December", 30)]
 
     for i in range(1, 13):
         if input_data == i:

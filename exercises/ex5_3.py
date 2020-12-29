@@ -23,11 +23,15 @@ def solve(input_data):
     result = []
     # Xoá dòng raise và Viết code vào đây set result làm kết quả
     # raise NotImplementedError("Học viên chưa làm bài này")
-    # freq = {}
-    # line = input()
-    # for word in line.split():
-
-
+    freq = {}
+    line = input_data
+    for word in line.split():
+        freq[word] = freq.get(word, 0) + 1
+    words = sorted(freq.keys())
+    print(words)
+    for w in words:
+        result.append((w, freq[w]))
+    result.sort(key=lambda x: x[1], reverse=True)
     return result
 
 
@@ -45,9 +49,10 @@ def main():
     result = solve(data)
     assert result[:5] == top, (result[:5], top)
 
+
     # In ra 10 từ xuất hiện nhiều nhất kèm số lần xuất hiện
     # Viết code in ra màn hình sau dòng này
-
+    assert result[:5] == top, (result[:10], top)
 
 if __name__ == "__main__":
     main()

@@ -13,11 +13,8 @@ def solve(list1, list2):
     Require: use only lists, if/else and for loops.
     '''
     result = []
-
     # Xoá dòng raise và Viết code vào đây set result làm kết quả
-    for i in list2:
-        if i in list1:
-            result.append(i)
+    result = list(set(list1).intersection(list2))
     return result
 
 

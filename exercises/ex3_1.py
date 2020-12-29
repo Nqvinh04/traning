@@ -21,11 +21,11 @@ def solve(input_data):
     """
     result = None
     if input_data == 0:
-        return '0'
+        return 0
     elif input_data == 1:
         return 1
     else:
-        result = '1' + bin(input_data).split('1')[-1]
+        result = int('1' + bin(input_data).split('1')[-1])
     return result
 def main():
     print(solve(5))
